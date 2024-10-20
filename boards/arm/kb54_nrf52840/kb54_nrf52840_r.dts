@@ -1,0 +1,9 @@
+#include "kb54_nrf52840.dtsi"
+
+/ {
+	model = "KB54 nRF52840 R";
+};
+
+&default_transform {
+    col-offset = <27>;
+};

@@ -1,0 +1,9 @@
+#include "kb54_nrf52840.dtsi"
+
+/ {
+	model = "KB54 nRF52840 L";
+};
+
+zephyr_udc0: &usbd {
+    status = "okay";
+};

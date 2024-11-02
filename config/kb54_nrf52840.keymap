@@ -42,13 +42,13 @@
    &kp F12      &kp F1      &kp F2      &kp F3    &kp F4    &kp F5        &kp F6     &kp F7      &kp F8     &kp F9      &kp F10   &kp F11
    &trans   &none      &none      &none       &none    &none        &none     &kp RA(U)   &kp UP     &kp RA(O)   &none    &kp RBKT
    &trans   &kp RA(A)   &kp RA(S)   &trans       &none    &kp PIPE      &kp HOME   &kp LEFT    &kp DOWN   &kp RIGHT   &kp END   &none
-   &trans   &bt BT_PRV  &bt BT_NXT  &bt BT_CLR   &none   &mo 2        &kp F13     &kp F14      &kp F15     &none      &none    &none
+   &trans   &none  &none  &none   &none   &mo 2        &kp F13     &kp F14      &kp F15     &none      &none    &none
                                         &trans   &trans   &trans       &kp DEL     &trans      &trans
                         >;
                 };
 
                 raise_layer {
-                    display-name = "CONFIG";
+                    display-name = "CNF";
                     label = "CNF";
 // -----------------------------------------------------------------------------------------
 // |   `  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  DEL |
@@ -57,10 +57,10 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none &bt BT_CLR         &none &none &none &none &none &none
+   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none &none &bt BT_CLR         &none &none &none &none &none &none
    &none &none &none &none &none &none         &none &none        @kp C_VOL_UP &none &none &none
    &none &none &none &none &none &none         &none @kp C_BRI_DN &kp K_VOL_DN @kp C_BRI_UP &none &none
-   &none &none &none &none &none &none         &none &none &kp C_MUTE &none &none &none
+   &none &none &none &none &none &none         &none &none &kp K_MUTE &none &none &none
                      &none &none &none         &none &none &none
                         >;
                 };

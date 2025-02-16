@@ -13,17 +13,11 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |   `  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  |  -   |
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  [   |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  =   |
-//                    | CTR | GUI | ALT |   | BCK | SPC  | RET |
                         bindings = <
    &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5       &kp N6 &kp N7 &kp N8    &kp N9  &kp N0   &kp MINUS
    &kp ESC   &kp Q  &kp W  &kp E  &kp R  &kp T        &kp Y  &kp U  &kp I     &kp O   &kp P    &kp LBKT
    &kp TAB   &kp A  &kp S  &kp D  &kp F  &kp G        &kp H  &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LALT &kp Z  &kp X  &kp C  &kp V  &kp B         &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp EQUAL
+   &kp LALT  &kp Z  &kp X  &kp C  &kp V  &kp B        &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp EQUAL
                    &kp LSHFT &kp LGUI &kp LCTRL       &kp BSPC &lt 1 SPC &kp RET
                         >;
                 };
@@ -31,37 +25,24 @@
                 lower_layer {
                     display-name = "LWR";
                     label = "LWR";
-// -----------------------------------------------------------------------------------------
-// |   `  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  DEL |
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  UP  |  *  |  (  |  )  | BSPC |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  RIGHT | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-// &bt BT_CLR   &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4
                         bindings = <
-   &kp F12      &kp F1      &kp F2      &kp F3    &kp F4    &kp F5        &kp F6     &kp F7      &kp F8     &kp F9      &kp F10   &kp F11
-   &trans   &none      &none      &none       &none    &none        &none     &kp RA(U)   &kp UP     &kp RA(O)   &none    &kp RBKT
-   &trans   &kp RA(A)   &kp RA(S)   &trans       &none    &kp PIPE      &kp HOME   &kp LEFT    &kp DOWN   &kp RIGHT   &kp END   &none
-   &trans   &none  &none  &none   &none   &mo 2        &kp F13     &kp F14      &kp F15     &none      &none    &none
-                                        &trans   &trans   &trans       &kp DEL     &trans      &trans
+   &kp F12  &kp F1     &kp F2    &kp F3  &kp F4  &kp F5        &kp F6     &kp F7      &kp F8     &kp F9     &kp F10  &kp F11
+   &trans   &none      &none     &none   &none   &none         &none      &kp RA(U)   &kp UP     &kp RA(O)  &none    &kp RBKT
+   &trans   &kp RA(A)  &kp RA(S) &trans  &none   &kp PIPE      &kp HOME   &kp LEFT    &kp DOWN   &kp RIGHT  &kp END  &none
+   &trans   &none      &none     &none   &none   &mo 2         &kp F13    &kp F14     &kp F15    &none      &none    &none
+                                 &trans  &trans  &trans        &kp DEL    &trans     &trans
                         >;
                 };
 
                 raise_layer {
                     display-name = "CNF";
                     label = "CNF";
-// -----------------------------------------------------------------------------------------
-// |   `  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  DEL |
-// |  TAB |     |VOL- |VOL+ | P/P | PRV |   | NXT | BR- | BR+ |  (  |  )  | BSPC |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &bt BT_CLR &none &none &none &bt BT_PRV &bt BT_NXT         &none &none &none &none &none &none
-   &none &none &none &none &none &none         &none &none &kp C_VOL_UP &none &none &none
-   &none &none &none &none &none &none         &none &kp C_BRI_DN &kp C_VOL_DN &kp C_BRI_UP &none &none
-   &none &none &none &none &none &none         &none &none &none &none &none &none
-                     &none &none &none         &none &none &none
+   &none &none &none &none &none &none                        &none &none &kp C_VOL_UP &none &none &none
+   &none &none &none &none &none &none                        &none &kp C_BRI_DN &kp C_VOL_DN &kp C_BRI_UP &none &none
+   &none &none &none &none &none &none                        &none &none &none &none &none &none
+                     &none &none &none                        &none &none &none
                         >;
                 };
         };
